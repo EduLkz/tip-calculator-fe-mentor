@@ -25,15 +25,20 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/EduLkz/Interactive-rating-fe-mentor)
-- Live Site URL: [Add live site URL here](https://interactive-rating-fe-mentor.netlify.app/)
+- Solution URL: [Add solution URL here](https://github.com/EduLkz/tip-calculator-fe-mentor)
+- Live Site URL: [Add live site URL here](https://tip-calculator-fementor.netlify.app/)
 
 ## My process
+  Create the layout with the buttons and inputs
+  Put everything in place
+  Create the script and make sure everything is working as expected
+  create mobile version
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS
+- Javascript
 - Flexbox
 - Desktop-first workflow
 
