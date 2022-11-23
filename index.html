@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { font-size: 11px; color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <div class="app-title">SPLI<br>TTER</div>
+  <div class="container">
+    <div class="tip-calculator-container">
+      <div class="bill-container">
+        Bill
+        <label class="inputlabel" currency="$">
+          <input class="input" type="number" min="0.00" step="0.10" placeholder="0.00" id="bill" oninput="SetBillValue(this)"/>
+        </label>
+      </div>
+
+      <div class="tip-container">
+        Select Tip %
+        <div class="tip-buttons">
+          <button class="tip-value" onclick="SetPercent(5)">5%</button>
+          <button class="tip-value" onclick="SetPercent(10)">10%</button>
+          <button class="tip-value" onclick="SetPercent(15)">15%</button>
+          <button class="tip-value" onclick="SetPercent(25)">25%</button>
+          <button class="tip-value" onclick="SetPercent(50)">50%</button>
+          <input class="input tip-custom" type="number" max="100" min="0" step="10" placeholder="Custom" id="custom-percent" oninput="SetCustomPercent(this)" error="Invalid Value"/>
+        </div>
+      </div>
+
+      <div class="people-container">
+        <div class="person-title">
+          Number of People
+          <span class="error-message hidden" id="people-error"> Can't be zero </span>
+        </div>
+        <label class="person-label">
+          <input class="input" placeholder="0" min="0" type="number" id="number-of-people" oninput="SetNumberOfPeople(this)" error="Can't be zero"/>
+        </label>
+      </div>
+    </div>
+    <div class="results-container">
+      <div class="results">
+        <div class="result-person-amount">
+          <div class="result-text-container">
+            Tip Amount
+            <span class="per-person"><br>/person</span>
+          </div>
+          <div class="amount-result" id="amount-per-person">$0.00</div>
+        </div>
+
+        <div class="result-person-amount">
+          <div class="result-text-container">
+            Total
+            <span class="per-person"><br>/person</span>
+          </div>
+          <div class="amount-result" id="total-per-person">$0.00</div>
+        </div>
+      </div>
+
+      <button class="reset-calculation" onclick="Reset()">Reset</button>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://edurocha-portifolio.netlify.app/" target="_blank">Eduardo Rocha</a>.
+  </div>
+</body>
+</html>
